@@ -23,7 +23,8 @@
 <header class="top">
   <a class="name" href="#top">Ibin Joseph</a>
   <nav aria-label="Sections">
-    <a href="#commercial">Work</a>
+    <a href="#commercial">Films</a>
+    <a href="#photography">Photos</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -44,11 +45,65 @@
   </section>
 
   <section id="commercial" class="block">
-    <h2>Commercial</h2>
-    <div class="grid one">
+    <h2>Commercial &amp; branding</h2>
+    <div class="grid">
       <button class="tile" data-src="media/indian-taste.mp4" data-title="Indian Taste — Ad">
         <img src="media/indian-taste.jpg" alt="Man in a white shirt eating a snack in a car, from the Indian Taste ad" loading="lazy">
         <span class="cap"><span>Indian Taste — Ad</span><span>0:52</span></span>
+      </button>
+      <button class="tile" data-src="media/osce-masterclass.mp4" data-title="Fortuwest — OSCE masterclass">
+        <img src="media/osce-masterclass.jpg" alt="Nurse demonstrating a clinical skill on a training mannequin" loading="lazy">
+        <span class="cap"><span>Fortuwest — OSCE masterclass</span><span>0:46</span></span>
+      </button>
+      <button class="tile" data-src="media/osce-womens-day.mp4" data-title="Fortuwest — Women’s Day">
+        <img src="media/osce-womens-day.jpg" alt="Black and white shot of nurses training around a table" loading="lazy">
+        <span class="cap"><span>Fortuwest — Women’s Day</span><span>0:30</span></span>
+      </button>
+      <button class="tile" data-src="media/osce-interview.mp4" data-title="Fortuwest — Interview training">
+        <img src="media/osce-interview.jpg" alt="Trainer speaking to camera in an office" loading="lazy">
+        <span class="cap"><span>Fortuwest — Interview training</span><span>0:42</span></span>
+      </button>
+    </div>
+  </section>
+
+  <section id="events" class="block">
+    <h2>Events</h2>
+    <div class="grid">
+      <button class="tile" data-src="media/theyyam.mp4" data-title="Theyyam — Event reel">
+        <img src="media/theyyam.jpg" alt="Classical dancers performing on stage" loading="lazy">
+        <span class="cap"><span>Theyyam — Event reel</span><span>1:16</span></span>
+      </button>
+      <button class="tile" data-src="media/cricket.mp4" data-title="Cricket tournament">
+        <img src="media/cricket.jpg" alt="Player receiving a medal at a sponsored cricket tournament" loading="lazy">
+        <span class="cap"><span>Cricket tournament</span><span>0:43</span></span>
+      </button>
+    </div>
+  </section>
+
+  <section id="people" class="block">
+    <h2>Couples, family &amp; fashion</h2>
+    <div class="grid wide-grid">
+      <button class="tile wide" data-src="media/akhil-allen.mp4" data-title="Akhil &amp; Allen">
+        <img src="media/akhil-allen.jpg" alt="Couple under festive street lights in London" loading="lazy">
+        <span class="cap"><span>Akhil &amp; Allen</span><span>1:02</span></span>
+      </button>
+      <button class="tile wide" data-src="media/jobin-rays.mp4" data-title="Jobin &amp; Rays — London">
+        <img src="media/jobin-rays.jpg" alt="Couple laughing beneath festive lights" loading="lazy">
+        <span class="cap"><span>Jobin &amp; Rays — London</span><span>0:42</span></span>
+      </button>
+    </div>
+    <div class="grid">
+      <button class="tile" data-src="media/blossom.mp4" data-title="Cherry blossom">
+        <img src="media/blossom.jpg" alt="Woman standing under a blossoming magnolia tree" loading="lazy">
+        <span class="cap"><span>Cherry blossom</span><span>0:15</span></span>
+      </button>
+      <button class="tile" data-src="media/first-birthday.mp4" data-title="First birthday">
+        <img src="media/first-birthday.jpg" alt="Little girl wearing a tiara at her first birthday" loading="lazy">
+        <span class="cap"><span>First birthday</span><span>0:42</span></span>
+      </button>
+      <button class="tile" data-src="media/mandy.mp4" data-title="Mandy — Fashion reel">
+        <img src="media/mandy.jpg" alt="Model in a black top in front of a graffiti wall" loading="lazy">
+        <span class="cap"><span>Mandy — Fashion reel</span><span>0:12</span></span>
       </button>
     </div>
   </section>
@@ -97,9 +152,51 @@
 
   <section id="photography" class="block">
     <h2>Photography</h2>
-    <figure class="photo">
-      <img src="media/photo-1.jpg" width="2400" height="1600" alt="Black and white portrait of a woman in a dark blazer seated at a long table in a library" loading="lazy">
-    </figure>
+    <div class="filters" role="group" aria-label="Filter photos">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="wedding" aria-pressed="false">Weddings</button>
+      <button type="button" data-filter="couple" aria-pressed="false">Couples</button>
+      <button type="button" data-filter="portrait" aria-pressed="false">Portraits</button>
+      <button type="button" data-filter="family" aria-pressed="false">Family</button>
+      <button type="button" data-filter="event" aria-pressed="false">Events</button>
+      <button type="button" data-filter="interior" aria-pressed="false">Interiors</button>
+    </div>
+    <div class="gallery">
+      <button class="ph" data-cat="wedding" data-full="media/photos/wedding-01.jpg"><img src="media/photos/thumb/wedding-01.jpg" width="900" height="596" alt="Bride and groom under trees as her veil flies in the wind" loading="lazy"></button>
+      <button class="ph" data-cat="wedding" data-full="media/photos/wedding-02.jpg"><img src="media/photos/thumb/wedding-02.jpg" width="600" height="900" alt="Black and white portrait of a bride and groom at a church altar" loading="lazy"></button>
+      <button class="ph" data-cat="wedding" data-full="media/photos/wedding-03.jpg"><img src="media/photos/thumb/wedding-03.jpg" width="600" height="900" alt="Bride and groom on a tree-lined path" loading="lazy"></button>
+      <button class="ph" data-cat="wedding" data-full="media/photos/wedding-04.jpg"><img src="media/photos/thumb/wedding-04.jpg" width="900" height="600" alt="Bride smiling with her arms around the groom" loading="lazy"></button>
+      <button class="ph" data-cat="wedding" data-full="media/photos/wedding-05.jpg"><img src="media/photos/thumb/wedding-05.jpg" width="600" height="900" alt="Bride and groom kissing under the veil" loading="lazy"></button>
+      <button class="ph" data-cat="wedding" data-full="media/photos/wedding-06.jpg"><img src="media/photos/thumb/wedding-06.jpg" width="900" height="557" alt="Bride and groom running hand in hand across a park" loading="lazy"></button>
+      <button class="ph" data-cat="couple" data-full="media/photos/couple-01.jpg"><img src="media/photos/thumb/couple-01.jpg" width="595" height="900" alt="Couple framed by a stone arch with Big Ben behind" loading="lazy"></button>
+      <button class="ph" data-cat="couple" data-full="media/photos/couple-02.jpg"><img src="media/photos/thumb/couple-02.jpg" width="600" height="900" alt="Smiling woman leaning into her partner" loading="lazy"></button>
+      <button class="ph" data-cat="couple" data-full="media/photos/couple-03.jpg"><img src="media/photos/thumb/couple-03.jpg" width="600" height="900" alt="Man kissing his partner’s forehead in autumn light" loading="lazy"></button>
+      <button class="ph" data-cat="couple" data-full="media/photos/couple-04.jpg"><img src="media/photos/thumb/couple-04.jpg" width="600" height="900" alt="Couple sitting under a willow tree beside a pond" loading="lazy"></button>
+      <button class="ph" data-cat="couple" data-full="media/photos/couple-05.jpg"><img src="media/photos/thumb/couple-05.jpg" width="600" height="900" alt="Couple touching foreheads in warm evening light" loading="lazy"></button>
+      <button class="ph" data-cat="couple" data-full="media/photos/couple-06.jpg"><img src="media/photos/thumb/couple-06.jpg" width="900" height="600" alt="Couple embracing in a flower-lined doorway" loading="lazy"></button>
+      <button class="ph" data-cat="couple" data-full="media/photos/couple-07.jpg"><img src="media/photos/thumb/couple-07.jpg" width="600" height="900" alt="Expecting couple in front of the London Eye" loading="lazy"></button>
+      <button class="ph" data-cat="portrait" data-full="media/photo-1.jpg"><img src="media/photos/thumb/library.jpg" width="900" height="600" alt="Black and white portrait of a woman in a dark blazer seated at a long table in a library" loading="lazy"></button>
+      <button class="ph" data-cat="portrait" data-full="media/photos/portrait-01.jpg"><img src="media/photos/thumb/portrait-01.jpg" width="600" height="900" alt="Woman posing against a blue graffiti wall" loading="lazy"></button>
+      <button class="ph" data-cat="portrait" data-full="media/photos/portrait-02.jpg"><img src="media/photos/thumb/portrait-02.jpg" width="616" height="900" alt="Woman crouching in front of red and white graffiti" loading="lazy"></button>
+      <button class="ph" data-cat="portrait" data-full="media/photos/portrait-03.jpg"><img src="media/photos/thumb/portrait-03.jpg" width="716" height="900" alt="Woman in an off-shoulder top beside a graffiti wall" loading="lazy"></button>
+      <button class="ph" data-cat="portrait" data-full="media/photos/portrait-04.jpg"><img src="media/photos/thumb/portrait-04.jpg" width="600" height="900" alt="Woman on a city street looking over her shoulder" loading="lazy"></button>
+      <button class="ph" data-cat="portrait" data-full="media/photos/portrait-05.jpg"><img src="media/photos/thumb/portrait-05.jpg" width="614" height="900" alt="Woman seated among leaves, looking at the camera" loading="lazy"></button>
+      <button class="ph" data-cat="portrait" data-full="media/photos/portrait-06.jpg"><img src="media/photos/thumb/portrait-06.jpg" width="624" height="900" alt="Woman in sunglasses leaning on a railing" loading="lazy"></button>
+      <button class="ph" data-cat="portrait" data-full="media/photos/portrait-07.jpg"><img src="media/photos/thumb/portrait-07.jpg" width="600" height="900" alt="Low-light cinematic portrait of a couple" loading="lazy"></button>
+      <button class="ph" data-cat="portrait" data-full="media/photos/portrait-08.jpg"><img src="media/photos/thumb/portrait-08.jpg" width="900" height="600" alt="Cinematic low-light scene of a woman reaching across a corridor floor" loading="lazy"></button>
+      <button class="ph" data-cat="family" data-full="media/photos/family-01.jpg"><img src="media/photos/thumb/family-01.jpg" width="600" height="900" alt="Mother and father cradling their newborn" loading="lazy"></button>
+      <button class="ph" data-cat="family" data-full="media/photos/family-02.jpg"><img src="media/photos/thumb/family-02.jpg" width="600" height="900" alt="Parents kissing their newborn’s head" loading="lazy"></button>
+      <button class="ph" data-cat="family" data-full="media/photos/family-03.jpg"><img src="media/photos/thumb/family-03.jpg" width="600" height="900" alt="Newborn looking up from a white blanket" loading="lazy"></button>
+      <button class="ph" data-cat="family" data-full="media/photos/family-04.jpg"><img src="media/photos/thumb/family-04.jpg" width="600" height="900" alt="Black and white photo of a mother holding her newborn" loading="lazy"></button>
+      <button class="ph" data-cat="event" data-full="media/photos/event-01.jpg"><img src="media/photos/thumb/event-01.jpg" width="600" height="900" alt="Chef cooking in a restaurant kitchen" loading="lazy"></button>
+      <button class="ph" data-cat="event" data-full="media/photos/event-02.jpg"><img src="media/photos/thumb/event-02.jpg" width="900" height="600" alt="Friends dancing at a club night" loading="lazy"></button>
+      <button class="ph" data-cat="event" data-full="media/photos/event-03.jpg"><img src="media/photos/thumb/event-03.jpg" width="900" height="600" alt="Man and woman laughing on a crowded dance floor" loading="lazy"></button>
+      <button class="ph" data-cat="event" data-full="media/photos/event-04.jpg"><img src="media/photos/thumb/event-04.jpg" width="900" height="600" alt="DJ performing under blue stage light" loading="lazy"></button>
+      <button class="ph" data-cat="event" data-full="media/photos/event-05.jpg"><img src="media/photos/thumb/event-05.jpg" width="900" height="600" alt="Woman with sunglasses on her head dancing at a party" loading="lazy"></button>
+      <button class="ph" data-cat="event" data-full="media/photos/event-06.jpg"><img src="media/photos/thumb/event-06.jpg" width="900" height="506" alt="Singer on stage under laser lights" loading="lazy"></button>
+      <button class="ph" data-cat="interior" data-full="media/photos/interior-01.jpg"><img src="media/photos/thumb/interior-01.jpg" width="900" height="600" alt="Shop interior with lit fragrance shelves" loading="lazy"></button>
+      <button class="ph" data-cat="interior" data-full="media/photos/interior-02.jpg"><img src="media/photos/thumb/interior-02.jpg" width="900" height="600" alt="Shop reception counter with the EKAM sign" loading="lazy"></button>
+    </div>
   </section>
 
   <section id="about" class="block about">
@@ -144,9 +241,12 @@
   <p><a href="https://www.instagram.com/photos.ffi/" rel="noopener">Instagram @photos.ffi</a></p>
 </footer>
 
-<dialog id="player" aria-label="Video player">
-  <button class="close" aria-label="Close video">Close</button>
+<dialog id="player" aria-label="Media viewer">
+  <button class="close" aria-label="Close">Close</button>
   <video controls playsinline></video>
+  <img class="still" alt="">
+  <button class="nav prev" aria-label="Previous photo">&#8592;</button>
+  <button class="nav next" aria-label="Next photo">&#8594;</button>
 </dialog>
 
 <script src="script.js"></script>
