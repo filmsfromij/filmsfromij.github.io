@@ -131,3 +131,11 @@ dialog .nav:hover { background: var(--ink); color: #000; }
   dialog .nav { top: auto; bottom: 18px; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) { .ph img { transition: none; } }
+
+/* Compact gallery: small, even square thumbnails so the whole set fits in a scroll or two */
+.gallery { columns: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 4px; }
+.ph { margin: 0; aspect-ratio: 1 / 1; }
+.ph img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 560px) {
+  .gallery { columns: auto; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3px; }
+}
