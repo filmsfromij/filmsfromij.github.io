@@ -139,3 +139,14 @@ dialog .nav:hover { background: var(--ink); color: #000; }
 @media (max-width: 560px) {
   .gallery { columns: auto; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3px; }
 }
+
+/* Couples: mixed-shape videos in one even-height row, each at its true aspect ratio */
+.justify { display: flex; gap: 6px; }
+.jrow { display: flex; gap: 6px; flex: var(--sum) 1 0; min-width: 0; }
+.jrow .tile { flex: var(--ar) 1 0; min-width: 0; }
+.jrow .tile img { aspect-ratio: var(--ar); object-fit: cover; }
+@media (max-width: 760px) { .justify { flex-direction: column; } }
+@media (max-width: 560px) {
+  .jrow .tile .cap { padding: 22px 7px 7px; font-size: 10px; }
+  .jrow .tile .cap span:last-child { display: none; }
+}
