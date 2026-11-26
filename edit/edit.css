@@ -1,0 +1,64 @@
+/* Edit portfolio — builds on ../style.css (same tokens, header, tiles and viewer) */
+
+.edit-page .top { background: #050505; border-bottom: 1px solid var(--line); }
+.name .tag { color: var(--accent); }
+
+.edit-intro { padding: clamp(110px, 16vw, 190px) var(--gutter) clamp(24px, 4vw, 40px); }
+.kicker { margin-bottom: 14px; font: 500 12px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.edit-intro h1 { max-width: 12em; }
+.note { max-width: 42em; margin-top: 18px; color: var(--mute); font-size: 15px; line-height: 1.6; }
+.hint { margin: -6px 0 18px; color: var(--mute); font-size: 14px; }
+
+#reel { padding-top: clamp(40px, 6vw, 64px); }
+#reel video { background: #000; }
+
+/* "In production" placeholders */
+.soon { display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; aspect-ratio: 9 / 16; padding: 14px;
+  border: 1px dashed #333; background: repeating-linear-gradient(135deg, #0c0c0c 0 12px, #101010 12px 24px); }
+.soon.wide { aspect-ratio: 16 / 9; justify-content: center; align-items: center; }
+.soon span { font-weight: 500; }
+.soon small { font: 400 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--mute); }
+.soon.wide span { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--mute); }
+
+.stories { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+/* Before / after colour compare */
+.compare-list, .sound-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 24px); }
+.compare, .sound { margin: 0; }
+figcaption { margin-top: 10px; font: 400 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink); }
+.cmp { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #000; --pos: 50%; user-select: none; touch-action: pan-y; }
+.cmp video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cmp .before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.cmp .line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: var(--ink); pointer-events: none; }
+.cmp .line::after { content: "◀ ▶"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 7px 10px; border-radius: 99px;
+  background: var(--ink); color: #000; font-size: 10px; letter-spacing: 2px; white-space: nowrap; }
+.cmp input[type=range] { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
+.cmp .lab { position: absolute; top: 12px; padding: 4px 8px; background: #000a; font: 500 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; pointer-events: none; }
+.cmp .lab.b { left: 12px; } .cmp .lab.a { right: 12px; color: var(--accent); }
+
+/* Without / with sound design */
+.snd { position: relative; aspect-ratio: 16 / 9; background: #000; overflow: hidden; }
+.snd video { width: 100%; height: 100%; object-fit: cover; }
+.snd .controls { position: absolute; left: 12px; right: 12px; bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.snd button { padding: 9px 14px; border: 1px solid #fff4; border-radius: 99px; background: #000a; color: var(--ink); font: 500 11px var(--mono);
+  letter-spacing: .08em; text-transform: uppercase; cursor: pointer; backdrop-filter: blur(6px); }
+.snd button[aria-pressed="true"] { background: var(--ink); color: #000; border-color: var(--ink); }
+.snd .play { margin-right: auto; }
+.snd progress { position: absolute; left: 0; right: 0; top: 0; width: 100%; height: 3px; border: 0; appearance: none; background: #fff2; }
+.snd progress::-webkit-progress-bar { background: #fff2; }
+.snd progress::-webkit-progress-value { background: var(--accent); }
+.snd progress::-moz-progress-bar { background: var(--accent); }
+
+/* Empty compare / sound slots */
+.cmp.empty, .snd.empty { display: flex; align-items: center; justify-content: center; border: 1px dashed #333;
+  background: repeating-linear-gradient(135deg, #0c0c0c 0 12px, #101010 12px 24px); }
+.cmp.empty::before, .snd.empty::before { content: "In production"; font: 500 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--mute); }
+
+@media (max-width: 1100px) { .stories { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .compare-list, .sound-list { grid-template-columns: 1fr; } }
+@media (max-width: 560px) {
+  .stories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .name .tag { display: none; }
+  .edit-page .top nav { gap: 9px; }
+  .snd button { padding: 8px 10px; font-size: 10px; }
+}

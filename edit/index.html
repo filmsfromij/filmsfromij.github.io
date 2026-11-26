@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ibin Joseph — Edit Portfolio</title>
+<meta name="description" content="Edit portfolio of Ibin Joseph: narrative editing, colour grading and sound design.">
+<!-- In progress: keep out of search results until the films are in. Remove this line at launch. -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://filmsfromij.github.io/edit/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e0e0e'/%3E%3Crect x='14' y='8' width='4' height='16' fill='%23f2f0ec'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="edit.css">
+</head>
+<body class="edit-page">
+
+<header class="top solid">
+  <a class="name" href="#top">Ibin Joseph <span class="tag">/ Edit</span></a>
+  <nav aria-label="Sections">
+    <a href="#stories">Stories</a>
+    <a href="#colour">Colour</a>
+    <a href="#sound">Sound</a>
+    <a href="../">Portfolio&nbsp;↗</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="edit-intro">
+    <p class="kicker">Edit portfolio</p>
+    <h1>Story, colour and sound.</h1>
+    <p class="note">Narrative editing, colour grading and sound design. Visuals are licensed stock footage from Envato Elements; edit, grade, sound design and voiceover by Ibin Joseph.</p>
+  </section>
+
+  <section id="reel" class="block" aria-label="Edit reel">
+    <h2>Edit reel</h2>
+    <!-- Add the reel: <video controls preload="none" playsinline poster="media/edit-reel.jpg" src="media/edit-reel.mp4"></video> -->
+    <div class="soon wide"><span>Edit reel — in production</span></div>
+  </section>
+
+  <section id="stories" class="block">
+    <h2>Narrative edits</h2>
+    <!-- Replace a .soon card with a .tile button when its film is ready, e.g.
+    <button class="tile" data-src="media/first-sip.mp4" data-title="First Sip">
+      <img src="media/first-sip.jpg" alt="..." loading="lazy">
+      <span class="cap"><span>First Sip</span><span>0:45</span></span>
+    </button> -->
+    <div class="grid stories">
+      <div class="soon"><span>First Sip</span><small>Spec commercial · in production</small></div>
+      <div class="soon"><span>Race the Sun</span><small>Cycling · in production</small></div>
+      <div class="soon"><span>Unplugged</span><small>Lifestyle · in production</small></div>
+      <div class="soon"><span>Two Days, One Bag</span><small>Travel vlog · in production</small></div>
+      <div class="soon"><span>Ride Home</span><small>Narrative · in production</small></div>
+    </div>
+  </section>
+
+  <section id="colour" class="block">
+    <h2>Colour grade — before / after</h2>
+    <p class="hint">Drag the line to compare the original footage with the final grade.</p>
+    <!-- Fill data-before / data-after with two clips of identical length and timing. -->
+    <div class="compare-list">
+      <figure class="compare" data-before="" data-after="" data-title="Race the Sun — sunrise">
+        <figcaption>Race the Sun — sunrise</figcaption>
+      </figure>
+      <figure class="compare" data-before="" data-after="" data-title="First Sip — espresso">
+        <figcaption>First Sip — espresso</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="sound" class="block">
+    <h2>Sound design — without / with</h2>
+    <p class="hint">Press play, then switch between the stock audio and the full sound design.</p>
+    <!-- data-video: the clip with no audio. data-raw: stock audio only. data-designed: full sound design mix. Same length. -->
+    <div class="sound-list">
+      <figure class="sound" data-video="" data-raw="" data-designed="" data-title="Unplugged — the switch-off">
+        <figcaption>Unplugged — the switch-off</figcaption>
+      </figure>
+      <figure class="sound" data-video="" data-raw="" data-designed="" data-title="First Sip — bean to cup">
+        <figcaption>First Sip — bean to cup</figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact" class="contact">
+  <h2>Contact</h2>
+  <p><a href="mailto:ibinjosephaj@gmail.com">ibinjosephaj@gmail.com</a></p>
+  <p><a href="../">filmsfromij.github.io</a></p>
+</footer>
+
+<dialog id="player" aria-label="Media viewer">
+  <button class="close" aria-label="Close">Close</button>
+  <video controls playsinline></video>
+  <img class="still" alt="">
+  <button class="nav prev" aria-label="Previous photo">&#8592;</button>
+  <button class="nav next" aria-label="Next photo">&#8594;</button>
+</dialog>
+
+<script src="../script.js"></script>
+<script src="edit.js"></script>
+</body>
+</html>
